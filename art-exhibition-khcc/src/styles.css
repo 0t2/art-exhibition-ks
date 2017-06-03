@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.auth-card {
+    width: 400px;
+    text-align: center;
+    margin: 3em;
+}

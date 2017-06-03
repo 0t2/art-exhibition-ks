@@ -1,0 +1,17 @@
+<md-toolbar color="primary">
+    <button md-button md-ripple routerLink="/">
+        <md-icon>home</md-icon>
+        <span fxHide.lt-md=true>高雄市政府文化局-展覽活動</span>
+    </button>
+    <button md-button md-ripple routerLink="/favorite" *ngIf="(user | async)?.uid">
+        <md-icon>stars</md-icon>
+        <span fxHide.lt-md=true>我的收藏</span>
+    </button>
+    <span class="fill-remaining-space"></span>
+    <button md-button md-ripple routerLink="login" *ngIf="!(user | async)?.uid">
+        <span>登入</span>
+    </button>
+    <button md-button md-ripple (click)="logout()" *ngIf="(user | async)?.uid">
+        <span>登出</span>
+    </button>
+</md-toolbar>

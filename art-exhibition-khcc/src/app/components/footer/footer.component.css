@@ -1,0 +1,14 @@
+footer {
+    background-color: rgba(0, 0, 0, .54);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#owner {
+    text-decoration: none;
+    cursor: auto;
+    color: rgba(255, 255, 255, 0.870588);
+
+}

@@ -1,0 +1,23 @@
+<div class="masonry" ngStyle.gt-md="column-count: 3;" ngStyle.md="column-count: 2;" ngStyle.lt-md="column-count: 1;">
+  <div *ngFor="let item of realItems">
+    <md-card class="ex-card" *ngIf="showAll || item.fav">
+      <md-card-header>
+        <md-card-title>
+          <h3>{{ item.name }}</h3>
+        </md-card-title>
+        <md-card-subtitle>{{ item.exsDate | date:'yyyy/MM/dd' }}&mdash;{{ item.exeDate | date:'yyyy/MM/dd'}}</md-card-subtitle>
+      </md-card-header>
+      <img *ngIf="item.image1" md-card-image [src]="item.image1">
+      <md-card-content>
+        <p>
+          {{ item.description }}
+        </p>
+        <p>{{ item.orgName }}&mdash;{{ item.place }}</p>
+      </md-card-content>
+      <md-card-actions fxLayout align="start">
+        <button md-button fxFlex fxFlexFill *ngIf="(user | async)?.uid" (click)="add(item)">{{ item.fav ? '取消收藏' : '收藏' }}</button>
+        <!--<button md-button fxFlex fxFlexFill>更多</button>-->
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

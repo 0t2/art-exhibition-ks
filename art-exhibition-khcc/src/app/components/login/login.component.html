@@ -1,0 +1,32 @@
+<md-card class="auth-card" fxFlex>
+  <md-card-title>
+    <h2>登入</h2>
+  </md-card-title>
+  <md-card-content>
+    <button md-raised-button class="login-btn" (click)="loginFb()">
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="5px">
+        <md-icon svgIcon="facebook" fxFlex="20%"></md-icon>
+        <span fxFlex fxFlexFill>使用 Facebook 帳號登入</span>
+      </div>
+    </button>
+    <button md-raised-button class="login-btn" (click)="loginGoogle()">
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="5px">
+        <md-icon svgIcon="google" fxFlex="20%"></md-icon>
+        <span fxFlex fxFlexFill>使用 Google 帳號登入</span>
+      </div>
+    </button>
+    <button md-raised-button class="login-btn" routerLink="/login-email">
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="5px">
+        <md-icon fxFlex="20%">mail_outline</md-icon>
+        <span fxFlex fxFlexFill>使用 Email 帳號登入</span>
+      </div>
+    </button>
+    <hr>
+    <button md-raised-button color="accent" class="login-btn" routerLink="/signup">
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="5px">
+        <md-icon fxFlex="20%">info_outline</md-icon>
+        <span fxFlex fxFlexFill>還不是會員?點我註冊!</span>
+      </div>
+    </button>
+  </md-card-content>
+</md-card>

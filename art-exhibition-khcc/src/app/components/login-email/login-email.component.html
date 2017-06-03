@@ -1,0 +1,30 @@
+<md-card class="auth-card" fxFlex>
+  <md-card-title>
+    <h2>Email 登入</h2>
+  </md-card-title>
+  <md-card-content>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" fxLayout="column" fxLayoutAlign="center center">
+      <md-input-container fxFlex class="form-input">
+        <input mdInput placeholder="Email" required formControlName="email">
+        <md-error *ngIf="formGroup.controls.email.hasError('required')">
+          必填
+        </md-error>
+        <md-error *ngIf="!formGroup.controls.email.hasError('required') && formGroup.controls.email.hasError('email')">
+          請輸入正確的電子郵件
+        </md-error>
+      </md-input-container>
+      <md-input-container fxFlex class="form-input">
+        <input mdInput placeholder="密碼" required type="password" formControlName="pwd">
+        <md-error *ngIf="formGroup.controls.pwd.hasError('required')">
+          必填
+        </md-error>
+        <md-error *ngIf="formGroup.controls.pwd.hasError('minlength')">
+          密碼必須大於六位
+        </md-error>
+      </md-input-container>
+      <button md-raised-button color="accent" fxFlex="auto" type="submit" [disabled]="!formGroup.valid">
+          <span fxFlex fxFlexFill>登入</span>
+      </button>
+    </form>
+  </md-card-content>
+</md-card>
