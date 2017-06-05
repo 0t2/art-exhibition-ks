@@ -49,4 +49,12 @@ export class LoginComponent implements OnInit {
       });
   }
 
+  loginAnonymously() {
+    this.afAuth.auth.signInAnonymously()
+      .then(success => this.router.navigateByUrl("/"))
+      .catch(err => {
+        console.log(err);
+        this.error = err;
+      });
+  }
 }

@@ -3,6 +3,12 @@
     <h2>登入</h2>
   </md-card-title>
   <md-card-content>
+    <button md-raised-button class="login-btn" (click)="loginAnonymously()">
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="5px">
+        <md-icon fxFlex="20%">person_pin</md-icon>
+        <span fxFlex fxFlexFill>匿名登入</span>
+      </div>
+    </button>
     <button md-raised-button class="login-btn" (click)="loginFb()">
       <div fxLayout fxLayoutAlign="center center" fxLayoutGap="5px">
         <md-icon svgIcon="facebook" fxFlex="20%"></md-icon>
